@@ -1,8 +1,10 @@
 import { Card, Container, Grid } from "@mui/material";
 
-import ColoredSquareLoop from "./coloredSquareLoop/ColoredSquareLoop";
+import CircleLoop1 from "./CircleLoop1/CircleLoop1";
+import CircleLoop2 from "./CircleLoop2/CircleLoop2";
 import Loader from "./Loader";
 import styles from "./loaders.module.css";
+import SquareLoop1 from "./SquareLoop1/SquareLoop1";
 
 function Loaders() {
   const blueColor = "#4285f4";
@@ -14,25 +16,37 @@ function Loaders() {
     <Container className={styles.container}>
       <Grid container>
         <Grid item xs={12} md={6} lg={4}>
-          <Loader title="Coloured Square Loop">
-            <ColoredSquareLoop
+          <Loader title="Square Loop 1">
+            <SquareLoop1
               squareSize={20}
               square1={{ color: blueColor }}
               square2={{ color: greenColor }}
               square3={{ color: yellowColor }}
               square4={{ color: redColor }}
-            ></ColoredSquareLoop>
+            ></SquareLoop1>
           </Loader>
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
-          <Card variant="outlined" className={styles.card}>
-            Hi
-          </Card>
+          <Loader title="Circle Loop 1">
+            <CircleLoop1
+              circleSize={20}
+              circle1={{ color: blueColor }}
+              circle2={{ color: greenColor }}
+              circle3={{ color: yellowColor }}
+              circle4={{ color: redColor }}
+            ></CircleLoop1>
+          </Loader>
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
-          <Card variant="outlined" className={styles.card}>
-            Hi
-          </Card>
+          <Loader title="Circle Loop 2">
+            <CircleLoop2
+              circleSize={20}
+              circle1={{ color: blueColor }}
+              circle2={{ color: greenColor }}
+              circle3={{ color: yellowColor }}
+              circle4={{ color: redColor }}
+            ></CircleLoop2>
+          </Loader>
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
           <Card variant="outlined" className={styles.card}>

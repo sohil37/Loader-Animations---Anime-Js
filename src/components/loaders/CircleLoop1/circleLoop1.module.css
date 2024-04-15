@@ -1,0 +1,8 @@
+.container {
+  position: absolute;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+}

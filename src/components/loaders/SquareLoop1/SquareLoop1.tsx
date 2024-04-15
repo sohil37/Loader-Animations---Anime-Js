@@ -1,27 +1,27 @@
 import anime from "animejs";
 import { useEffect, useRef } from "react";
 
-import styles from "./coloredSquareLoop.module.css";
+import styles from "./squareLoop1.module.css";
 
-function ColoredSquareLoop(props: {
+function SquareLoop1(props: {
   squareSize: number;
   square1: { color: string };
   square2: { color: string };
   square3: { color: string };
   square4: { color: string };
 }) {
-  const blueSquareRef = useRef(null);
-  const greenSquareRef = useRef(null);
-  const yellowSquareRef = useRef(null);
-  const redSquareRef = useRef(null);
+  const square1Ref = useRef(null);
+  const square2Ref = useRef(null);
+  const square3Ref = useRef(null);
+  const square4Ref = useRef(null);
 
   useEffect(() => {
     try {
       const targets = [
-        blueSquareRef.current,
-        greenSquareRef.current,
-        yellowSquareRef.current,
-        redSquareRef.current,
+        square1Ref.current,
+        square2Ref.current,
+        square3Ref.current,
+        square4Ref.current,
       ];
 
       const movePixels = props.squareSize + props.squareSize / 2;
@@ -35,22 +35,22 @@ function ColoredSquareLoop(props: {
 
       animation
         .add({
-          targets: blueSquareRef.current,
+          targets: square1Ref.current,
           opacity: [0, 1],
         })
         .add({
-          targets: greenSquareRef.current,
+          targets: square2Ref.current,
           translateX: movePixels,
           opacity: [0, 1],
         })
         .add({
-          targets: yellowSquareRef.current,
+          targets: square3Ref.current,
           translateX: [movePixels, movePixels],
           translateY: [0, movePixels],
           opacity: [0, 1],
         })
         .add({
-          targets: redSquareRef.current,
+          targets: square4Ref.current,
           translateY: [movePixels, movePixels],
           translateX: [movePixels, 0],
           opacity: [0, 1],
@@ -59,6 +59,14 @@ function ColoredSquareLoop(props: {
           targets: targets,
           opacity: 0,
         });
+
+      return () => {
+        try {
+          animation.pause();
+        } catch (error) {
+          console.error(error);
+        }
+      };
     } catch (error) {
       console.error(error);
     }
@@ -75,7 +83,7 @@ function ColoredSquareLoop(props: {
           top: -(props.squareSize + props.squareSize / 4),
           left: -(props.squareSize + props.squareSize / 4),
         }}
-        ref={blueSquareRef}
+        ref={square1Ref}
       ></div>
       <div
         className={styles.square}
@@ -86,7 +94,7 @@ function ColoredSquareLoop(props: {
           top: -(props.squareSize + props.squareSize / 4),
           left: -(props.squareSize + props.squareSize / 4),
         }}
-        ref={greenSquareRef}
+        ref={square2Ref}
       ></div>
       <div
         className={styles.square}
@@ -97,7 +105,7 @@ function ColoredSquareLoop(props: {
           top: -(props.squareSize + props.squareSize / 4),
           left: -(props.squareSize + props.squareSize / 4),
         }}
-        ref={yellowSquareRef}
+        ref={square3Ref}
       ></div>
       <div
         className={styles.square}
@@ -108,10 +116,10 @@ function ColoredSquareLoop(props: {
           top: -(props.squareSize + props.squareSize / 4),
           left: -(props.squareSize + props.squareSize / 4),
         }}
-        ref={redSquareRef}
+        ref={square4Ref}
       ></div>
     </div>
   );
 }
 
-export default ColoredSquareLoop;
+export default SquareLoop1;
