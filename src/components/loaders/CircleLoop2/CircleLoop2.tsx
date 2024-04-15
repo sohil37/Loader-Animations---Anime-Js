@@ -49,6 +49,14 @@ function CircleLoop2(props: {
           duration: 375,
           endDelay: 375,
         });
+
+      return () => {
+        try {
+          animation.pause();
+        } catch (error) {
+          console.error(error);
+        }
+      };
     } catch (error) {
       console.error(error);
     }
