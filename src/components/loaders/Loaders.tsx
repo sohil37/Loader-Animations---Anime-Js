@@ -1,6 +1,7 @@
 import { Container, Grid } from "@mui/material";
 
 import BarRandom1 from "./BarRandom1/BarRandom1";
+import BarWave1 from "./BarWave1/BarWave1";
 import CircleLoop1 from "./CircleLoop1/CircleLoop1";
 import CircleLoop2 from "./CircleLoop2/CircleLoop2";
 import Loader from "./Loader";
@@ -15,7 +16,7 @@ function Loaders() {
 
   return (
     <Container className={styles.container}>
-      <Grid container>
+      <Grid container spacing={2}>
         <Grid item xs={12} md={6} lg={4}>
           <Loader title="Square Loop 1">
             <SquareLoop1
@@ -57,6 +58,16 @@ function Loaders() {
               noOfBars={10}
               colors={[blueColor, greenColor, yellowColor, redColor]}
             ></BarRandom1>
+          </Loader>
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <Loader title="Bar Wave 1">
+            <BarWave1
+              barMaxHeight={80}
+              barWidth={5}
+              noOfBars={10}
+              colors={[blueColor, greenColor, yellowColor, redColor]}
+            ></BarWave1>
           </Loader>
         </Grid>
       </Grid>

@@ -1,9 +1,9 @@
 import anime from "animejs";
 import { MutableRefObject, useEffect, useRef } from "react";
 
-import styles from "./barRandom1.module.css";
+import styles from "./barWave1.module.css";
 
-function BarRandom1(props: {
+function BarWave1(props: {
   barMaxHeight: number;
   barMinHeight?: number;
   barWidth: number;
@@ -23,32 +23,18 @@ function BarRandom1(props: {
         targets.push(barRefs[index].current);
       }
 
-      function randomValues() {
-        const animation = anime({
-          targets: targets,
-          height: function () {
-            return anime.random(
-              props.barMinHeight ? props.barMinHeight : 0,
-              props.barMaxHeight
-            );
-          },
-          easing: "linear",
-          duration: 300,
-          start: "center",
-          complete: randomValues,
-        });
-        return animation;
-      }
-
-      const animation = randomValues();
-
-      return () => {
-        try {
-          animation.pause();
-        } catch (error) {
-          console.error(error);
-        }
-      };
+      anime({
+        targets: targets,
+        height: [
+          props.barMinHeight ? props.barMinHeight : 10,
+          props.barMaxHeight,
+          props.barMinHeight ? props.barMinHeight : 10,
+        ],
+        easing: "linear",
+        duration: 700,
+        delay: anime.stagger(100),
+        loop: true,
+      });
     } catch (error) {
       console.error(error);
     }
@@ -65,6 +51,7 @@ function BarRandom1(props: {
             style={{
               backgroundColor: props.colors[index % props.colors.length],
               width: props.barWidth,
+              height: props.barMinHeight ? props.barMinHeight : 10,
             }}
             ref={barRef}
             key={index}
@@ -75,4 +62,4 @@ function BarRandom1(props: {
   );
 }
 
-export default BarRandom1;
+export default BarWave1;
