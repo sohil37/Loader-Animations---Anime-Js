@@ -23,7 +23,7 @@ function BarWave1(props: {
         targets.push(barRefs[index].current);
       }
 
-      anime({
+      const animation = anime({
         targets: targets,
         height: [
           props.barMinHeight ? props.barMinHeight : 10,
@@ -35,6 +35,14 @@ function BarWave1(props: {
         delay: anime.stagger(100),
         loop: true,
       });
+
+      return () => {
+        try {
+          animation.pause();
+        } catch (error) {
+          console.error(error);
+        }
+      };
     } catch (error) {
       console.error(error);
     }
