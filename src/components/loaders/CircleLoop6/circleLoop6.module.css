@@ -1,9 +1,12 @@
 .container {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .circle {
-  border: solid transparent;
+  border: solid;
   border-radius: 50%;
   position: absolute;
 }

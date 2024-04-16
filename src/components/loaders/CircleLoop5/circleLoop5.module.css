@@ -3,7 +3,6 @@
 }
 
 .circle {
-  aspect-ratio: 1;
   border: solid transparent;
   border-radius: 50%;
   position: absolute;

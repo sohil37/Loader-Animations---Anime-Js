@@ -35,7 +35,14 @@ function BarRandom1(props: {
           easing: "linear",
           duration: 300,
           start: "center",
-          complete: randomValues,
+          complete: () => {
+            try {
+              animation.pause();
+              randomValues();
+            } catch (error) {
+              console.error(error);
+            }
+          },
         });
         return animation;
       }
