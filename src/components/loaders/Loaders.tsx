@@ -6,6 +6,7 @@ import CircleLoop1 from "./CircleLoop1/CircleLoop1";
 import CircleLoop2 from "./CircleLoop2/CircleLoop2";
 import CircleLoop3 from "./CircleLoop3/CircleLoop3";
 import CircleLoop4 from "./CircleLoop4/CircleLoop4";
+import CircleLoop5 from "./CircleLoop5/CircleLoop5";
 import Loader from "./Loader";
 import styles from "./loaders.module.css";
 import SquareLoop1 from "./SquareLoop1/SquareLoop1";
@@ -93,6 +94,15 @@ function Loaders() {
               circle4Color={redColor}
               revolutionSize={30}
             ></CircleLoop4>
+          </Loader>
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <Loader title="Circle Loop 5">
+            <CircleLoop5
+              circleSize={50}
+              circleColor={blueColor}
+              circleBorderWidth={5}
+            ></CircleLoop5>
           </Loader>
         </Grid>
       </Grid>
