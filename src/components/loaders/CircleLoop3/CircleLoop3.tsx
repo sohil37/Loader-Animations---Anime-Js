@@ -8,7 +8,7 @@ function CircleLoop3(props: {
   circle1Color: string;
   circle2Color: string;
   circle3Color: string;
-  circleWidth: number;
+  circleBorderWidth: number;
 }) {
   const circle1Ref = useRef(null);
   const circle2Ref = useRef(null);
@@ -55,11 +55,11 @@ function CircleLoop3(props: {
   return (
     <div className={styles.container}>
       <div
-        className={`${styles.circle}`}
+        className={styles.circle}
         style={{
           borderRightColor: props.circle1Color,
           borderBottomColor: props.circle1Color,
-          borderWidth: props.circleWidth,
+          borderWidth: props.circleBorderWidth,
           height: props.circleSize,
           width: props.circleSize,
           top: -props.circleSize / 2,
@@ -68,11 +68,11 @@ function CircleLoop3(props: {
         ref={circle1Ref}
       ></div>
       <div
-        className={`${styles.circle}`}
+        className={styles.circle}
         style={{
           borderBottomColor: props.circle2Color,
           borderLeftColor: props.circle2Color,
-          borderWidth: props.circleWidth,
+          borderWidth: props.circleBorderWidth,
           height: props.circleSize - (props.circleSize * 40) / 100,
           width: props.circleSize - (props.circleSize * 40) / 100,
           top: -(props.circleSize - (props.circleSize * 40) / 100) / 2,
@@ -81,11 +81,11 @@ function CircleLoop3(props: {
         ref={circle2Ref}
       ></div>
       <div
-        className={`${styles.circle}`}
+        className={styles.circle}
         style={{
           borderLeftColor: props.circle3Color,
           borderTopColor: props.circle3Color,
-          borderWidth: props.circleWidth,
+          borderWidth: props.circleBorderWidth,
           height: props.circleSize - (props.circleSize * 80) / 100,
           width: props.circleSize - (props.circleSize * 80) / 100,
           top: -(props.circleSize - (props.circleSize * 80) / 100) / 2,

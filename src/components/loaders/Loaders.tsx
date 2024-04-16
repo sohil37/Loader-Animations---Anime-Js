@@ -5,6 +5,7 @@ import BarWave1 from "./BarWave1/BarWave1";
 import CircleLoop1 from "./CircleLoop1/CircleLoop1";
 import CircleLoop2 from "./CircleLoop2/CircleLoop2";
 import CircleLoop3 from "./CircleLoop3/CircleLoop3";
+import CircleLoop4 from "./CircleLoop4/CircleLoop4";
 import Loader from "./Loader";
 import styles from "./loaders.module.css";
 import SquareLoop1 from "./SquareLoop1/SquareLoop1";
@@ -78,8 +79,20 @@ function Loaders() {
               circle1Color={blueColor}
               circle2Color={greenColor}
               circle3Color={yellowColor}
-              circleWidth={5}
+              circleBorderWidth={5}
             ></CircleLoop3>
+          </Loader>
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <Loader title="Circle Loop 4">
+            <CircleLoop4
+              circleSize={20}
+              circle1Color={blueColor}
+              circle2Color={greenColor}
+              circle3Color={yellowColor}
+              circle4Color={redColor}
+              revolutionSize={30}
+            ></CircleLoop4>
           </Loader>
         </Grid>
       </Grid>
