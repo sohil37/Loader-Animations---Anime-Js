@@ -1,0 +1,17 @@
+.container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  border-radius: 50%;
+  position: absolute;
+}
+.eclipse {
+  position: absolute;
+  border-radius: 50%;
+  background-color: transparent;
+  border: solid transparent;
+}

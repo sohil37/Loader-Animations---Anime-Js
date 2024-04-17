@@ -9,6 +9,7 @@ import CircleLoop4 from "./CircleLoop4/CircleLoop4";
 import CircleLoop5 from "./CircleLoop5/CircleLoop5";
 import CircleLoop6 from "./CircleLoop6/CircleLoop6";
 import CircleLoop7 from "./CircleLoop7/CircleLoop7";
+import CircleLoop8 from "./CircleLoop8/CircleLoop8";
 import Loader from "./Loader";
 import styles from "./loaders.module.css";
 import SquareLoop1 from "./SquareLoop1/SquareLoop1";
@@ -136,6 +137,19 @@ function Loaders() {
               circle4Color={redColor}
               easing="linear"
             ></CircleLoop7>
+          </Loader>
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <Loader title="Circle Loop 8">
+            <CircleLoop8
+              centreCircle={{ color: redColor, size: 10 }}
+              eclipse={{
+                eclipse1: { color: yellowColor, borderWidth: 4, size: 70 },
+                eclipse2: { color: blueColor, borderWidth: 4, size: 70 },
+                eclipse3: { color: greenColor, borderWidth: 4, size: 70 },
+              }}
+              easing="linear"
+            ></CircleLoop8>
           </Loader>
         </Grid>
       </Grid>

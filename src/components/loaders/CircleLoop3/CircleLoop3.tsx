@@ -19,21 +19,21 @@ function CircleLoop3(props: {
     try {
       const circle1Animation = anime({
         rotate: 360,
-        duration: 1000,
+        duration: 800,
         targets: circle1Ref.current,
         loop: true,
         easing: props.easing,
       });
       const circle2Animation = anime({
         rotate: 360,
-        duration: 900,
+        duration: 600,
         targets: circle2Ref.current,
         loop: true,
         easing: props.easing,
       });
       const circle3Animation = anime({
         rotate: 360,
-        duration: 700,
+        duration: 500,
         targets: circle3Ref.current,
         loop: true,
         easing: props.easing,
