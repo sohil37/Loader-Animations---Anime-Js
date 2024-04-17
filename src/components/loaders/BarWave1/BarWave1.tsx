@@ -9,6 +9,7 @@ function BarWave1(props: {
   barWidth: number;
   noOfBars: number;
   colors: string[];
+  easing: string;
 }) {
   let barRefs: MutableRefObject<HTMLDivElement | null>[] = [];
 
@@ -30,7 +31,7 @@ function BarWave1(props: {
           props.barMaxHeight,
           props.barMinHeight ? props.barMinHeight : 10,
         ],
-        easing: "linear",
+        easing: props.easing,
         duration: 700,
         delay: anime.stagger(100),
         loop: true,

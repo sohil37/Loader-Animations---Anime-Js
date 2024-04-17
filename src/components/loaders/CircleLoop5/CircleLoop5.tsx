@@ -7,6 +7,7 @@ function CircleLoop5(props: {
   circleSize: number;
   circleColor: string;
   circleBorderWidth: number;
+  easing: string;
 }) {
   const circleRef = useRef(null);
 
@@ -17,7 +18,7 @@ function CircleLoop5(props: {
         duration: 1000,
         targets: circleRef.current,
         loop: true,
-        easing: "linear",
+        easing: props.easing,
       });
 
       return () => {

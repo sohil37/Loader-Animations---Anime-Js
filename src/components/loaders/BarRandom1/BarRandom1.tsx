@@ -9,6 +9,7 @@ function BarRandom1(props: {
   barWidth: number;
   noOfBars: number;
   colors: string[];
+  easing: string;
 }) {
   let barRefs: MutableRefObject<HTMLDivElement | null>[] = [];
 
@@ -32,7 +33,7 @@ function BarRandom1(props: {
               props.barMaxHeight
             );
           },
-          easing: "linear",
+          easing: props.easing,
           duration: 300,
           start: "center",
           complete: () => {

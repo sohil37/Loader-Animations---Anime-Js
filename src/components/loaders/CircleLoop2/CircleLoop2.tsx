@@ -9,6 +9,7 @@ function CircleLoop2(props: {
   circle2: { color: string };
   circle3: { color: string };
   circle4: { color: string };
+  easing: string;
 }) {
   const circle1Ref = useRef(null);
   const circle2Ref = useRef(null);
@@ -29,7 +30,7 @@ function CircleLoop2(props: {
 
       let animation = anime.timeline({
         loop: true,
-        easing: "linear",
+        easing: props.easing,
         opacity: 0,
       });
 

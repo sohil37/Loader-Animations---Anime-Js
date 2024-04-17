@@ -9,6 +9,7 @@ function CircleLoop3(props: {
   circle2Color: string;
   circle3Color: string;
   circleBorderWidth: number;
+  easing: string;
 }) {
   const circle1Ref = useRef(null);
   const circle2Ref = useRef(null);
@@ -21,21 +22,21 @@ function CircleLoop3(props: {
         duration: 1000,
         targets: circle1Ref.current,
         loop: true,
-        easing: "linear",
+        easing: props.easing,
       });
       const circle2Animation = anime({
         rotate: 360,
         duration: 900,
         targets: circle2Ref.current,
         loop: true,
-        easing: "linear",
+        easing: props.easing,
       });
       const circle3Animation = anime({
         rotate: 360,
         duration: 700,
         targets: circle3Ref.current,
         loop: true,
-        easing: "linear",
+        easing: props.easing,
       });
 
       return () => {

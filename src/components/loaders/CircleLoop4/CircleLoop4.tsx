@@ -10,6 +10,7 @@ function CircleLoop4(props: {
   circle3Color: string;
   circle4Color: string;
   revolutionSize: number;
+  easing: string;
 }) {
   const containerRef = useRef(null);
 
@@ -20,7 +21,7 @@ function CircleLoop4(props: {
         duration: 1500,
         targets: containerRef.current,
         loop: true,
-        easing: "linear",
+        easing: props.easing,
       });
 
       return () => {

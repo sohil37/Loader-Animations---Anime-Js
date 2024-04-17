@@ -8,6 +8,7 @@ import CircleLoop3 from "./CircleLoop3/CircleLoop3";
 import CircleLoop4 from "./CircleLoop4/CircleLoop4";
 import CircleLoop5 from "./CircleLoop5/CircleLoop5";
 import CircleLoop6 from "./CircleLoop6/CircleLoop6";
+import CircleLoop7 from "./CircleLoop7/CircleLoop7";
 import Loader from "./Loader";
 import styles from "./loaders.module.css";
 import SquareLoop1 from "./SquareLoop1/SquareLoop1";
@@ -29,6 +30,7 @@ function Loaders() {
               square2={{ color: greenColor }}
               square3={{ color: yellowColor }}
               square4={{ color: redColor }}
+              easing="easeInOutExpo"
             ></SquareLoop1>
           </Loader>
         </Grid>
@@ -40,6 +42,7 @@ function Loaders() {
               circle2={{ color: greenColor }}
               circle3={{ color: yellowColor }}
               circle4={{ color: redColor }}
+              easing="easeInOutExpo"
             ></CircleLoop1>
           </Loader>
         </Grid>
@@ -51,6 +54,7 @@ function Loaders() {
               circle2={{ color: greenColor }}
               circle3={{ color: yellowColor }}
               circle4={{ color: redColor }}
+              easing="linear"
             ></CircleLoop2>
           </Loader>
         </Grid>
@@ -61,6 +65,7 @@ function Loaders() {
               barWidth={5}
               noOfBars={10}
               colors={[blueColor, greenColor, yellowColor, redColor]}
+              easing="linear"
             ></BarRandom1>
           </Loader>
         </Grid>
@@ -71,6 +76,7 @@ function Loaders() {
               barWidth={5}
               noOfBars={10}
               colors={[blueColor, greenColor, yellowColor, redColor]}
+              easing="linear"
             ></BarWave1>
           </Loader>
         </Grid>
@@ -82,6 +88,7 @@ function Loaders() {
               circle2Color={greenColor}
               circle3Color={yellowColor}
               circleBorderWidth={5}
+              easing="linear"
             ></CircleLoop3>
           </Loader>
         </Grid>
@@ -94,6 +101,7 @@ function Loaders() {
               circle3Color={yellowColor}
               circle4Color={redColor}
               revolutionSize={30}
+              easing="linear"
             ></CircleLoop4>
           </Loader>
         </Grid>
@@ -103,6 +111,7 @@ function Loaders() {
               circleSize={50}
               circleColor={blueColor}
               circleBorderWidth={5}
+              easing="linear"
             ></CircleLoop5>
           </Loader>
         </Grid>
@@ -113,7 +122,20 @@ function Loaders() {
               circleMaxSize={65}
               circleColor={blueColor}
               circleBorderWidth={3}
+              easing="easeOutSine"
             ></CircleLoop6>
+          </Loader>
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <Loader title="Circle Loop 7">
+            <CircleLoop7
+              circleSize={15}
+              circle1Color={blueColor}
+              circle2Color={greenColor}
+              circle3Color={yellowColor}
+              circle4Color={redColor}
+              easing="linear"
+            ></CircleLoop7>
           </Loader>
         </Grid>
       </Grid>

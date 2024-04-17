@@ -8,6 +8,7 @@ function CircleLoop6(props: {
   circleMaxSize: number;
   circleColor: string;
   circleBorderWidth: number;
+  easing: string;
 }) {
   const circle1Ref = useRef(null);
   const circle2Ref = useRef(null);
@@ -23,7 +24,7 @@ function CircleLoop6(props: {
           height: [props.circleMinSize, props.circleMaxSize],
           width: [props.circleMinSize, props.circleMaxSize],
           opacity: [1, 0],
-          easing: "easeOutSine",
+          easing: props.easing,
           update: function () {
             if (Math.round(anim.progress) === 50) {
               anim2 = animation2();
@@ -43,7 +44,7 @@ function CircleLoop6(props: {
           height: [props.circleMinSize, props.circleMaxSize],
           width: [props.circleMinSize, props.circleMaxSize],
           opacity: [1, 0],
-          easing: "easeOutSine",
+          easing: props.easing,
           update: function () {
             if (Math.round(anim.progress) === 50) {
               animation1();

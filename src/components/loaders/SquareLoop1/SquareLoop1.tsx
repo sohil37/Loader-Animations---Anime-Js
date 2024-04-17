@@ -9,6 +9,7 @@ function SquareLoop1(props: {
   square2: { color: string };
   square3: { color: string };
   square4: { color: string };
+  easing: string;
 }) {
   const square1Ref = useRef(null);
   const square2Ref = useRef(null);
@@ -29,7 +30,7 @@ function SquareLoop1(props: {
       let animation = anime.timeline({
         loop: true,
         duration: 750,
-        easing: "easeInOutExpo",
+        easing: props.easing,
         opacity: 0,
       });
 

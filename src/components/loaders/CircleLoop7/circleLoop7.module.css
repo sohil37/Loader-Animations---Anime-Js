@@ -1,0 +1,10 @@
+.container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+}
