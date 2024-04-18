@@ -10,6 +10,7 @@ import CircleLoop5 from "./CircleLoop5/CircleLoop5";
 import CircleLoop6 from "./CircleLoop6/CircleLoop6";
 import CircleLoop7 from "./CircleLoop7/CircleLoop7";
 import CircleLoop8 from "./CircleLoop8/CircleLoop8";
+import LineDrawing1 from "./LineDrawing1/LineDrawing1";
 import Loader from "./Loader";
 import styles from "./loaders.module.css";
 import SquareLoop1 from "./SquareLoop1/SquareLoop1";
@@ -23,18 +24,6 @@ function Loaders() {
   return (
     <Container className={styles.container}>
       <Grid container spacing={2}>
-        <Grid item xs={12} md={6} lg={4}>
-          <Loader title="Square Loop 1">
-            <SquareLoop1
-              squareSize={20}
-              square1={{ color: blueColor }}
-              square2={{ color: greenColor }}
-              square3={{ color: yellowColor }}
-              square4={{ color: redColor }}
-              easing="easeInOutExpo"
-            ></SquareLoop1>
-          </Loader>
-        </Grid>
         <Grid item xs={12} md={6} lg={4}>
           <Loader title="Circle Loop 1">
             <CircleLoop1
@@ -59,28 +48,7 @@ function Loaders() {
             ></CircleLoop2>
           </Loader>
         </Grid>
-        <Grid item xs={12} md={6} lg={4}>
-          <Loader title="Bar Random 1">
-            <BarRandom1
-              barMaxHeight={80}
-              barWidth={5}
-              noOfBars={10}
-              colors={[blueColor, greenColor, yellowColor, redColor]}
-              easing="linear"
-            ></BarRandom1>
-          </Loader>
-        </Grid>
-        <Grid item xs={12} md={6} lg={4}>
-          <Loader title="Bar Wave 1">
-            <BarWave1
-              barMaxHeight={80}
-              barWidth={5}
-              noOfBars={10}
-              colors={[blueColor, greenColor, yellowColor, redColor]}
-              easing="linear"
-            ></BarWave1>
-          </Loader>
-        </Grid>
+
         <Grid item xs={12} md={6} lg={4}>
           <Loader title="Circle Loop 3">
             <CircleLoop3
@@ -150,6 +118,51 @@ function Loaders() {
               }}
               easing="linear"
             ></CircleLoop8>
+          </Loader>
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <Loader title="Square Loop 1">
+            <SquareLoop1
+              squareSize={20}
+              square1={{ color: blueColor }}
+              square2={{ color: greenColor }}
+              square3={{ color: yellowColor }}
+              square4={{ color: redColor }}
+              easing="easeInOutExpo"
+            ></SquareLoop1>
+          </Loader>
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <Loader title="Bar Random 1">
+            <BarRandom1
+              barMaxHeight={80}
+              barWidth={5}
+              noOfBars={10}
+              colors={[blueColor, greenColor, yellowColor, redColor]}
+              easing="linear"
+            ></BarRandom1>
+          </Loader>
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <Loader title="Bar Wave 1">
+            <BarWave1
+              barMaxHeight={80}
+              barWidth={5}
+              noOfBars={10}
+              colors={[blueColor, greenColor, yellowColor, redColor]}
+              easing="linear"
+            ></BarWave1>
+          </Loader>
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <Loader title="Line Drawing 1">
+            <LineDrawing1
+              borderColor={blueColor}
+              correctPathColor={blueColor}
+              dividerColor={blueColor}
+              size={75}
+              easing="easeInOutSine"
+            ></LineDrawing1>
           </Loader>
         </Grid>
       </Grid>
