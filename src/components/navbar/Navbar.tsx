@@ -69,7 +69,7 @@ function Navbar() {
                   <Tooltip title="Sohil Gurung">
                     <Avatar
                       alt="Sohil Gurung Pic"
-                      src="/facebookProfilePic.jpg"
+                      src="./facebookProfilePic.jpg"
                     />
                   </Tooltip>
                 </Box>
@@ -80,7 +80,7 @@ function Navbar() {
                   <IconButton onClick={handleOpenUserMenu}>
                     <Avatar
                       alt="Sohil Gurung Pic"
-                      src="/facebookProfilePic.jpg"
+                      src="./facebookProfilePic.jpg"
                     />
                   </IconButton>
                 </Tooltip>
