@@ -16,7 +16,7 @@ function LineDrawing1(props: {
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: props.easing,
         duration: 1500,
-        delay: function (el, i) {
+        delay: function (_, i) {
           return i * 100;
         },
         loop: true,
