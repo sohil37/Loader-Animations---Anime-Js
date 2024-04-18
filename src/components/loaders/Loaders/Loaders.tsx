@@ -1,19 +1,19 @@
 import { Container, Grid } from "@mui/material";
 
-import BarRandom1 from "./BarRandom1/BarRandom1";
-import BarWave1 from "./BarWave1/BarWave1";
-import CircleLoop1 from "./CircleLoop1/CircleLoop1";
-import CircleLoop2 from "./CircleLoop2/CircleLoop2";
-import CircleLoop3 from "./CircleLoop3/CircleLoop3";
-import CircleLoop4 from "./CircleLoop4/CircleLoop4";
-import CircleLoop5 from "./CircleLoop5/CircleLoop5";
-import CircleLoop6 from "./CircleLoop6/CircleLoop6";
-import CircleLoop7 from "./CircleLoop7/CircleLoop7";
-import CircleLoop8 from "./CircleLoop8/CircleLoop8";
-import LineDrawing1 from "./LineDrawing1/LineDrawing1";
-import Loader from "./Loader";
+import BarRandom1 from "../BarRandom1/BarRandom1";
+import BarWave1 from "../BarWave1/BarWave1";
+import CircleLoop1 from "../CircleLoop1/CircleLoop1";
+import CircleLoop2 from "../CircleLoop2/CircleLoop2";
+import CircleLoop3 from "../CircleLoop3/CircleLoop3";
+import CircleLoop4 from "../CircleLoop4/CircleLoop4";
+import CircleLoop5 from "../CircleLoop5/CircleLoop5";
+import CircleLoop6 from "../CircleLoop6/CircleLoop6";
+import CircleLoop7 from "../CircleLoop7/CircleLoop7";
+import CircleLoop8 from "../CircleLoop8/CircleLoop8";
+import LineDrawing1 from "../LineDrawing1/LineDrawing1";
+import Loader from "../Loader/Loader";
+import SquareLoop1 from "../SquareLoop1/SquareLoop1";
 import styles from "./loaders.module.css";
-import SquareLoop1 from "./SquareLoop1/SquareLoop1";
 
 function Loaders() {
   const blueColor = "#4285f4";

@@ -1,13 +1,20 @@
 import { Card, Divider, Typography } from "@mui/material";
+import { styled } from "@mui/material/styles";
 
 import styles from "./loader.module.css";
 
 function Loader(props: { children: JSX.Element; title: string }) {
+  const StyledTypography = styled(Typography)(({ theme }) => ({
+    [theme.breakpoints.up("md")]: {
+      fontSize: "1rem",
+    },
+  }));
+
   return (
     <Card variant="outlined" className={styles.card}>
-      <Typography variant="button" fontSize={"1rem"}>
+      <StyledTypography variant="button" className={styles.title}>
         {props.title}
-      </Typography>
+      </StyledTypography>
       <Divider></Divider>
       <div className={styles.loader}>{props.children}</div>
     </Card>

@@ -26,7 +26,7 @@ function CircleLoop2(props: {
         circle4Ref.current,
       ];
 
-      var path = anime.path("path");
+      var path = anime.path("circle");
 
       let animation = anime.timeline({
         loop: true,
@@ -114,15 +114,22 @@ function CircleLoop2(props: {
       <svg
         width={revolutionSize}
         height={revolutionSize}
-        viewBox={`0 0 ${revolutionSize} ${revolutionSize}`}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path
+        <circle
+          r={revolutionSize / 2}
+          cx={revolutionSize / 2}
+          cy={revolutionSize / 2}
+          fill="none"
+        />
+        {/* <path
           d={`M25 0
            a ${props.circleSize} ${props.circleSize} 0 0 1 0 ${revolutionSize}
            a ${props.circleSize} ${props.circleSize} 0 0 1 0 -${revolutionSize}`}
           fill="none"
-        />
+          stroke="black"
+          strokeWidth={3}
+        /> */}
       </svg>
     </div>
   );

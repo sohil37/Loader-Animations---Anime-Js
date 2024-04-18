@@ -1,0 +1,11 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+.actionBtnContainer {
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  padding: 12px;
+}

@@ -1,7 +1,5 @@
-import "./App.css";
-
-import Loaders from "./components/loaders/Loaders";
-import Navbar from "./components/Navbar";
+import Loaders from "./components/loaders/Loaders/Loaders";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
